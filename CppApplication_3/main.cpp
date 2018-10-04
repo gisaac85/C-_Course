@@ -12,4 +12,5 @@ int main() {
   cin>>age;
   cout<<"Your Full name is: "<<fName<<" "<<lName;
   cout<<"\nYour Age is: "<<age;
+  system("pause");
 }
