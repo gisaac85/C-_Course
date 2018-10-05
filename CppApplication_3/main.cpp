@@ -1,17 +1,32 @@
 #include <iostream>
+#include<ctime>
+#include<cstdlib>
+
 using namespace std;
+
+int dividedBy(int x,int y);
+
 int main() {
-  cout << "Hello World!\n";
-  string fName,lName;
-  int age;
-  cout<<"enter first name:";
-  cin>>fName;
-  cout<<"enter last name:";
-  cin>>lName;
-  cout<<"enter age:";
-  cin>>age;
-  cout<<"Your Full name is: "<<fName<<" "<<lName;
-  cout<<"\nYour Age is: "<<age;
+    
+    int x;
+    int y;
+    cout << "$$ DIVEDED X BY Y $$\n=============================="<<endl;
+    cout << "\nEnter a first number: ";
+    cin >> x;
+     cout << "\nEnter a second number: ";
+     cin >>y;
+     
+    dividedBy(x,y);
   
-  //end
+    return 0; 
+}
+
+int dividedBy(int x,int y){
+    if(y==0){
+        cout<<"Divide By 0 is NOT possible!";
+    }
+    else{
+    int res=x/y;
+    cout<<x<<"/"<<y<<"="<<res;
+    }
 }
