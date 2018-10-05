@@ -1,32 +1,23 @@
 #include <iostream>
 #include<ctime>
 #include<cstdlib>
+#include<string>
 
 using namespace std;
 
-int dividedBy(int x,int y);
-
+class Cars{
+public:
+    string carModel;
+    int maxSpeed;
+    void printProps(){
+        cout<<"Your Car is: "<<carModel<<" and its max speed= "<<maxSpeed;
+    };
+};
 int main() {
     
-    int x;
-    int y;
-    cout << "$$ DIVEDED X BY Y $$\n=============================="<<endl;
-    cout << "\nEnter a first number: ";
-    cin >> x;
-     cout << "\nEnter a second number: ";
-     cin >>y;
-     
-    dividedBy(x,y);
-  
+    Cars myCar;
+    myCar.carModel="Honda";
+    myCar.maxSpeed=200;
+    myCar.printProps();
     return 0; 
-}
-
-int dividedBy(int x,int y){
-    if(y==0){
-        cout<<"Divide By 0 is NOT possible!";
-    }
-    else{
-    int res=x/y;
-    cout<<x<<"/"<<y<<"="<<res;
-    }
 }
