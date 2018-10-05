@@ -7,7 +7,11 @@ using namespace std;
 
 class Cars{
 public:
+    Cars(string consName){
+        cout<<"\nThis printed by the CONSTRUCTOR !"<<endl;
+        setCarModel(consName);
         
+    };
     void setCarModel(string carModelName){
         carModel=carModelName;
     };
@@ -28,9 +32,13 @@ private:
 };
 int main() {
     
-    Cars myCar;
-    
-    string cModel;
+    Cars myCar("Mazda");
+    cout << myCar.getCarModel();
+    Cars myCar1("Honda");
+    cout << myCar1.getCarModel();
+
+    /*
+      string cModel;
     int mSpeed;
     
     cout << "Enter Your Car Model: ";
@@ -43,5 +51,7 @@ int main() {
     
     cout << "Your Car Model is: "<<myCar.getCarModel();
     cout << " And Its max Speed= "<< myCar.getCarMaxSpeed();
+    */
+   
     return 0; 
 }
