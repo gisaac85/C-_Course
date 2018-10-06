@@ -8,24 +8,23 @@ using namespace std;
 
 int main() {
     
-    int number;
-    int n=1;
-    int myNumbers[5] = { }; 
-    int total=0;
+    double avg=0;
+    double total=0;
+    int times=0;
+    double number;
     
-    while(n<=5){
-        cout << "Enter a number: "<<endl;
-        cin >> number;
-        myNumbers[n]={number};
+    cout<<"Enter your First Number: "<<endl;
+    cin >> number;
+    while(number!=-1){
         total=total+number;
-        n++;
+        times++;
+        cout << "Enter Next number: "<<endl;
+        cin >> number;
     }
-    cout << "Your Numbers are: ";
-    for(int k=0;k<5;k++){
-        cout<<myNumbers[k]<<"\t";
-   }
+    avg=total/times;
+    cout<<"You entered "<<times<<" numbers!"<<endl;
+    cout<<"Your Total= "<<total<<endl;
+    cout<<"Your Average= "<<avg<<endl;
     
-    cout << "\nThe Total Sum of your numbers= "<<total;
-   
     return 0; 
 }
