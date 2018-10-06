@@ -2,40 +2,15 @@
 #include<ctime>
 #include<cstdlib>
 #include<string>
+#include"Cars.h"
 
 using namespace std;
 
-class Cars{
-public:
-    Cars(string consName){
-        cout<<"\nThis printed by the CONSTRUCTOR !"<<endl;
-        setCarModel(consName);
-        
-    };
-    void setCarModel(string carModelName){
-        carModel=carModelName;
-    };
-    string getCarModel(){
-      return carModel;  
-    };
-    
-     void setCarMaxSpeed(int carMaxSpeed){
-        maxSpeed=carMaxSpeed;
-    };
-    int getCarMaxSpeed(){
-      return maxSpeed;  
-    };
-    
-private:
-    string carModel;
-    int maxSpeed;
-};
 int main() {
     
-    Cars myCar("Mazda");
-    cout << myCar.getCarModel();
-    Cars myCar1("Honda");
-    cout << myCar1.getCarModel();
+    Cars myCar;
+    myCar.setSpeed(180);
+    cout << myCar.getSpeed();
 
     /*
       string cModel;
