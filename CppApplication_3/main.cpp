@@ -8,25 +8,24 @@ using namespace std;
 
 int main() {
     
-    Cars myCar;
-    myCar.setSpeed(180);
-    cout << myCar.getSpeed();
-
-    /*
-      string cModel;
-    int mSpeed;
+    int number;
+    int n=1;
+    int myNumbers[5] = { }; 
+    int total=0;
     
-    cout << "Enter Your Car Model: ";
-    cin >>cModel;
-    myCar.setCarModel(cModel);
-   
-    cout << "Enter Car Max Speed: ";
-    cin >>mSpeed;
-    myCar.setCarMaxSpeed(mSpeed);
+    while(n<=5){
+        cout << "Enter a number: "<<endl;
+        cin >> number;
+        myNumbers[n]={number};
+        total=total+number;
+        n++;
+    }
+    cout << "Your Numbers are: ";
+    for(int k=0;k<5;k++){
+        cout<<myNumbers[k]<<"\t";
+   }
     
-    cout << "Your Car Model is: "<<myCar.getCarModel();
-    cout << " And Its max Speed= "<< myCar.getCarMaxSpeed();
-    */
+    cout << "\nThe Total Sum of your numbers= "<<total;
    
     return 0; 
 }
